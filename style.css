@@ -1,0 +1,153 @@
+:root {
+  font-size: calc(0.9em + 0.08vw);
+  --bg-color: #fff;
+  --name-color: hsl(0, 0%, 90%);
+  --verified-color: hsl(0, 0%, 70%);
+  --main-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 81%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 1.2;
+  background-color: hsl(189, 89%, 95%);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.panel-container {
+  display: grid;
+  grid-template-areas:
+    "daniel daniel jon kira"
+    "jean patrick patrick kira";
+  gap: 2em;
+  width: 900px;
+}
+
+.panel {
+  position: relative;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  background-color: var(--bg-color);
+}
+.daniel {
+  grid-area: daniel;
+  --bg-color: hsl(263, 55%, 52%);
+  box-shadow: 1px 1px 15px hsl(0, 0%, 40%);
+  position: relative;
+}
+
+.quotes {
+  position: absolute;
+  width: 5em;
+  right: 3em;
+  top: 0;
+}
+
+.jon {
+  grid-area: jon;
+  --bg-color: hsl(217, 19%, 35%);
+  box-shadow: 1px 1px 15px hsl(0, 0%, 40%);
+}
+
+.jean {
+  grid-area: jean;
+  box-shadow: 3px 3px 15px hsl(0, 0%, 40%);
+}
+.patrick {
+  grid-area: patrick;
+  --bg-color: hsl(219, 29%, 14%);
+  box-shadow: 1px 1px 15px hsl(0, 0%, 40%);
+}
+.kira {
+  grid-area: kira;
+  box-shadow: 3px 3px 15px hsl(0, 0%, 40%);
+}
+.person {
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.person__img {
+  border-radius: 100%;
+  float: left;
+  margin-right: 1em;
+  width: 2em;
+}
+
+.person__name {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--name-color);
+}
+
+.person__name.dark {
+  --name-color: hsl(0, 0%, 35%);
+}
+
+.person__verified {
+  font-size: 0.65rem;
+  color: var(--verified-color);
+}
+
+.person__verified.dark {
+  --verified-color: hsl(0, 0%, 60%);
+}
+
+.main-txt {
+  font-weight: 700;
+  color: var(--main-color);
+  position: relative;
+}
+
+.main-txt.dark {
+  --main-color: hsl(0, 0%, 30%);
+}
+
+.body-txt {
+  font-size: 0.7rem;
+  margin-top: 1em;
+  line-height: 1.8;
+  color: var(--body-color);
+}
+
+.body-txt.dark {
+  --body-color: hsl(0, 0%, 40%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+  .panel-container {
+    grid-template-areas:
+      "daniel daniel jon jon"
+      "jean jean patrick patrick"
+      "kira kira kira kira";
+  }
+}
+
+@media (max-width: 550px) {
+  .panel-container {
+    grid-template-areas:
+      "daniel"
+      "jon"
+      "jean"
+      "patrick"
+      "kira";
+  }
+}
