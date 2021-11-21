@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(0.9em + 0.08vw);
+  font-size: calc(15px + 0.1vw);
   --bg-color: #fff;
   --name-color: hsl(0, 0%, 90%);
   --verified-color: hsl(0, 0%, 70%);
